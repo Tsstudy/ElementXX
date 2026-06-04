@@ -16,7 +16,7 @@
     <el-container>
       <el-aside width="220px" style="border-right: 1px solid #e6e6e6; background: #fff">
         <el-menu
-          :default-openeds="['basic', 'form', 'feedback']"
+          :default-openeds="['basic', 'form', 'feedback', 'combo']"
           router
           :default-active="$route.path"
           style="border-right: none"
@@ -67,9 +67,16 @@
             <el-menu-item index="/feedback/messagebox">MessageBox 消息弹出框</el-menu-item>
             <el-menu-item index="/feedback/popconfirm">Popconfirm 气泡确认</el-menu-item>
           </el-sub-menu>
+          <el-sub-menu index="combo">
+            <template #title>
+              <el-icon><Connection /></el-icon>
+              <span>组合示例</span>
+            </template>
+            <el-menu-item index="/combo/prefill">预填单</el-menu-item>
+          </el-sub-menu>
         </el-menu>
       </el-aside>
-      <el-main style="padding: 20px; background: #f5f7fa; overflow-y: auto">
+      <el-main style="padding: 20px; background: #fff; overflow-y: auto">
         <router-view />
       </el-main>
     </el-container>

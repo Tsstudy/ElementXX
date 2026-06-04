@@ -68,6 +68,10 @@ const routes = [
   {
     path: '/feedback/popconfirm',
     component: () => import('../views/feedback/PopconfirmDemo.vue')
+  },
+  {
+    path: '/combo/prefill',
+    component: () => import('../views/combo/PrefillDemo.vue')
   }
 ]
 
